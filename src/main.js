@@ -46,7 +46,7 @@ function getPhotos(name) {
   const BASE_URL = 'https://pixabay.com';
   const END_POINT = '/api/';
   const searchParams = new URLSearchParams({
-    key: ,
+    key: '24543353-3824dfbf23e7b5ead533e5f72',
     q: name,
     image_type: 'photo',
     orientation: 'horizontal',
