@@ -59,3 +59,141 @@ a {
 .gallery-item:focus {
   transform: scale(1.04);
 }
+
+.container-app {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  font-weight: bold;
+}
+
+p {
+  text-align: center;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #4e75ff;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.loader.loading {
+  display: block;
+}
+
+.loader::after,
+.loader::before {
+  content: '';
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: animloader 2s linear infinite;
+}
+
+.loader::after {
+  animation-delay: 6s;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.image-info {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+
+img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.basicLightbox {
+  padding: 28px 164px;
+}
+
+.basicLightbox__placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.modal {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.input {
+  padding: 8px 16px;
+  width: 272px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  font-size: 16px;
+}
+
+.input:hover {
+  border: 1px solid #000;
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid #4e75ff;
+}
+
+.input::placeholder {
+  color: #808080;
+}
+
+.search-btn {
+  display: inline-flex;
+  padding: 18px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #4e75ff;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #6c8cff;
+}
